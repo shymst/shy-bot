@@ -18,7 +18,7 @@ module.exports = (robot) ->
     msg.send "今日は#{msg.random lunch}にしよう"
 
   # cronJob = new cronJob('00 30 11 * * 1-5', () ->
-  #   envelope = room: "times_ymst1993s"
+  #   envelope = room: "random"
   #   robot.send envelope, "お昼の時間や、今日は#{robot.random lunch}なんてどう？"
   # )
   # cronJob.start() # cronJobの実行

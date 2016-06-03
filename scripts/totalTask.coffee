@@ -1,8 +1,6 @@
 # Description:  Aggregation of task
 
 request = require('request')
-# fs      = require('fs')
-# body = fs.readFileSync('./scripts/body.json').toString()
 
 module.exports = (robot) ->
   robot.hear /task:(.*)/i, (msg) ->
@@ -67,7 +65,7 @@ module.exports = (robot) ->
       robot.logger.info tasks
 
       day = today(date)
-      msg.send ":calendar:#{day}"
+      msg.send "======= `#{day}` ======="
 
       for key, value of tasks
         t_time = ""
@@ -83,7 +81,7 @@ module.exports = (robot) ->
 
         t_time += hours + "h " if hours isnt 0
         t_time += minutes + "m " if minutes isnt 0
-        t_time += sec + "s " if sec isnt 0
+        # t_time += sec + "s " if sec isnt 0
 
         if taskName.indexOf("トイレ") != -1
           msg.send "#{taskName} : #{t_time}"

@@ -10,14 +10,3 @@ module.exports = (robot) ->
       "がんばれ！"
     ]
     msg.send msg.random tired
-
-  # robot.hear /今日/i, (msg) ->
-  #   date = new Date
-  #   day = today(date)
-  #   msg.send day
-  #
-  # today = (d) ->
-  #   year  = d.getFullYear()
-  #   month = d.getMonth() + 1
-  #   date  = d.getDate()
-  #   return "#{year}年#{month}月#{date}日"
